@@ -30,26 +30,38 @@ class _BottomNavBarState extends State<BottomNavBar> {
         showSelectedLabels: true,
         elevation: 10,
         type: BottomNavigationBarType.fixed,
-        items: const [
+        items: [
           BottomNavigationBarItem(
-            icon: Icon(Icons.home_outlined),
+            icon: const Icon(Icons.home_outlined),
             label: 'Home',
-            activeIcon: Icon(Icons.home, color: Colors.green),
+            activeIcon: Icon(
+              Icons.home,
+              color: Colors.blue[900], // Use Colors.blue[900] here
+            ),
           ),
           BottomNavigationBarItem(
-            icon: Icon(Icons.article_outlined),
+            icon: const Icon(Icons.article_outlined),
             label: 'Blog',
-            activeIcon: Icon(Icons.article, color: Colors.green),
+            activeIcon: Icon(
+              Icons.article,
+              color: Colors.blue[900],
+            ),
           ),
           BottomNavigationBarItem(
-            icon: Icon(Icons.shopping_cart_outlined),
+            icon: const Icon(Icons.shopping_cart_outlined),
             label: 'Cart',
-            activeIcon: Icon(Icons.shopping_cart, color: Colors.green),
+            activeIcon: Icon(
+              Icons.shopping_cart,
+              color: Colors.blue[900],
+            ),
           ),
           BottomNavigationBarItem(
-            icon: Icon(Icons.person_outline),
+            icon: const Icon(Icons.person_outline),
             label: 'Profile',
-            activeIcon: Icon(Icons.person, color: Colors.green),
+            activeIcon: Icon(
+              Icons.person,
+              color: Colors.blue[900],
+            ),
           ),
         ],
       ),

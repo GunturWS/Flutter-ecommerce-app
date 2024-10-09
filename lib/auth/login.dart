@@ -11,15 +11,11 @@ class _LogInState extends State<LogIn> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      backgroundColor: Colors.white,
       appBar: AppBar(
-        backgroundColor: Colors.white,
+        backgroundColor: Colors.white, // backgroundColor: Colors.white,
         elevation: 0, // No shadow
-        leading: IconButton(
-          icon: Icon(Icons.arrow_back, color: Colors.black),
-          onPressed: () {
-            Navigator.pop(context);
-          },
-        ),
+        automaticallyImplyLeading: false,
       ),
       body: SingleChildScrollView(
         child: Padding(
@@ -27,7 +23,7 @@ class _LogInState extends State<LogIn> {
           child: Column(
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
-              // Tokopedia logo
+              // taStore logo
               Center(
                 child: Image.asset(
                   'images/LogoTuf.png', // Place your Tokopedia logo here
@@ -50,11 +46,11 @@ class _LogInState extends State<LogIn> {
               Text(
                 "Masukkan email dan password Anda untuk melanjutkan",
                 style: TextStyle(
-                  fontSize: 16,
-                  color: Colors.black54,
+                  fontSize: 15,
+                  color: Colors.black87,
                 ),
               ),
-              SizedBox(height: 30),
+              SizedBox(height: 20),
 
               // Email Input Field
               Text(
@@ -65,7 +61,8 @@ class _LogInState extends State<LogIn> {
                   fontWeight: FontWeight.w500,
                 ),
               ),
-              SizedBox(height: 10),
+              SizedBox(height: 5),
+
               Container(
                 decoration: BoxDecoration(
                   borderRadius: BorderRadius.circular(8),
@@ -81,7 +78,7 @@ class _LogInState extends State<LogIn> {
                   keyboardType: TextInputType.emailAddress,
                 ),
               ),
-              SizedBox(height: 20),
+              SizedBox(height: 15),
 
               // Password Input Field
               Text(
@@ -92,7 +89,8 @@ class _LogInState extends State<LogIn> {
                   fontWeight: FontWeight.w500,
                 ),
               ),
-              SizedBox(height: 10),
+              SizedBox(height: 5),
+
               Container(
                 decoration: BoxDecoration(
                   borderRadius: BorderRadius.circular(8),
@@ -108,25 +106,25 @@ class _LogInState extends State<LogIn> {
                   ),
                 ),
               ),
-              SizedBox(height: 10),
+              SizedBox(height: 20),
 
               // Forgot Password
-              Align(
-                alignment: Alignment.centerRight,
-                child: TextButton(
-                  onPressed: () {
-                    // Handle forgot password logic
-                  },
-                  child: Text(
-                    'Lupa Password?',
-                    style: TextStyle(
-                      color: Colors.blue.shade700,
-                      fontWeight: FontWeight.bold,
-                    ),
-                  ),
-                ),
-              ),
-              SizedBox(height: 30),
+              // Align(
+              //   alignment: Alignment.centerRight,
+              //   child: TextButton(
+              //     onPressed: () {
+              //       // Handle forgot password logic
+              //     },
+              //     child: Text(
+              //       'Lupa Password?',
+              //       style: TextStyle(
+              //         color: Colors.blue.shade700,
+              //         fontWeight: FontWeight.bold,
+              //       ),
+              //     ),
+              //   ),
+              // ),
+              // SizedBox(height: 10),
 
               // Login Button
               SizedBox(
@@ -162,16 +160,17 @@ class _LogInState extends State<LogIn> {
                 children: [
                   Text(
                     "Belum punya akun?",
-                    style: TextStyle(color: Colors.black54),
+                    style: TextStyle(color: Colors.black87),
                   ),
                   TextButton(
                     onPressed: () {
+                      Navigator.pushNamed(context, '/register');
                       // Handle sign up logic
                     },
                     child: Text(
                       "Daftar",
                       style: TextStyle(
-                        color: Colors.blue.shade700,
+                        color: Colors.blue.shade800,
                         fontWeight: FontWeight.bold,
                       ),
                     ),
